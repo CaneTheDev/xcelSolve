@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Zap, Instagram } from 'lucide-react'
+import { Instagram } from 'lucide-react'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,9 +11,11 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
-              <Zap className="w-6 h-6 text-gray-900 fill-emerald-300" />
-              <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">XcelSolve</span>
+            <Link to="/" className="flex items-center shrink-0 group">
+              <span className="font-outfit text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                <span className="text-2xl sm:text-3xl font-black bg-gradient-to-br from-emerald-500 via-emerald-600 to-teal-500 bg-clip-text text-transparent mr-[2px] transition-all duration-300 group-hover:from-emerald-400 group-hover:to-teal-400 inline-block transform group-hover:scale-105">X</span>
+                celSolve
+              </span>
             </Link>
             <p className="text-sm text-gray-500 max-w-sm leading-relaxed">
               We help businesses attract customers, build strong online presence, and automate repetitive office tasks using smart systems and AI.
