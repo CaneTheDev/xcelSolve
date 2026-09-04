@@ -1,260 +1,193 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { TrendingUp, Monitor, Cpu, Check, ArrowRight } from 'lucide-react'
+import { Globe, Share2, Sparkles, Check, ArrowRight } from 'lucide-react'
+import useIsMobile from '../hooks/useIsMobile'
+import ServicesMobile from './Services.mobile'
 
 function Services() {
+  const isMobile = useIsMobile()
+
+  const serviceList = [
+    {
+      id: 'websites',
+      title: 'Websites',
+      tagline: 'Simple, mobile-friendly websites built to bring in customers.',
+      accentColor: '#0F6E56',
+      accentBg: '#E7F6F1',
+      icon: <Globe className="w-6 h-6" style={{ color: '#0F6E56' }} />,
+      idealFor: 'Tradespeople, salons, cafes, clinics, and local professional services needing an effective online presence.',
+      features: [
+        'Designed specifically for mobile phones and tablets',
+        'Fast loading speeds with zero clutter or unnecessary extras',
+        'Clear call-to-action buttons for phone calls, WhatsApp, and quote requests',
+        'Easy to update and maintain without technical headaches',
+        'Search-friendly structure so local customers can find you easily'
+      ]
+    },
+    {
+      id: 'social-media',
+      title: 'Social media marketing',
+      tagline: 'Grow your local presence and stay visible to nearby customers.',
+      accentColor: '#D85A30',
+      accentBg: '#FDEFEA',
+      icon: <Share2 className="w-6 h-6" style={{ color: '#D85A30' }} />,
+      idealFor: 'Businesses wanting to stay active, build trust, and reach local clients in their immediate service area.',
+      features: [
+        'Targeted local visibility campaigns on Facebook and Instagram',
+        'Clear, straightforward messaging tailored to your community',
+        'Consistent digital presence that keeps your business top of mind',
+        'Lead generation campaigns that connect you directly with interested buyers',
+        'No confusing marketing jargon, just transparent progress'
+      ]
+    },
+    {
+      id: 'ai-automation',
+      title: 'AI and automation',
+      tagline: 'Save time on repetitive admin and customer follow-up.',
+      accentColor: '#534AB7',
+      accentBg: '#EFEFFC',
+      icon: <Sparkles className="w-6 h-6" style={{ color: '#534AB7' }} />,
+      idealFor: 'Busy owners who spend too many evening hours answering repetitive questions and sending quotes.',
+      features: [
+        'Automated initial responses to new website and message inquiries',
+        'Smart appointment and consultation booking reminders',
+        'Automated customer follow-ups so warm leads never get lost',
+        'Simple intake forms that organize your customer requests automatically',
+        'Practical, easy-to-use setups without complex software overhead'
+      ]
+    }
+  ]
+
+  if (isMobile) {
+    return <ServicesMobile />
+  }
+
   return (
-    <div className="relative min-h-screen bg-gray-50 overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.15]" style={{ color: '#000' }}>
-        <svg width="100%" height="100%">
+    <div className="bg-white py-12 sm:py-20 min-h-[calc(100vh-144px)] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="services-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-              <circle cx="16" cy="16" r="1.5" fill="currentColor" />
+            <pattern id="services-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+              <polygon points="60,10 90,50 60,90 30,50" fill="#0C447C" />
+              <polygon points="10,60 25,80 10,100 -5,80" fill="#0C447C" />
+              <polygon points="110,60 125,80 110,100 95,80" fill="#0C447C" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#services-grid)" />
+          <rect width="100%" height="100%" fill="url(#services-pattern)" />
         </svg>
       </div>
 
-      {/* Gradient Orbs */}
-      <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-24 left-1/3 w-[500px] h-[500px] bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="px-3 py-1 text-xs font-semibold text-emerald-700 bg-emerald-100 rounded-full uppercase tracking-wider">
-            Our Expertise
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
-            Services Built for
-            <br className="hidden sm:inline" />
-            <span className="relative inline-block mt-2">
-              <span className="relative z-10 px-3">Business Growth</span>
-              <span className="absolute inset-0 bg-emerald-300 -skew-y-1 transform"></span>
-            </span>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Page Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Simple services built for real results
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-            We combine high-performance marketing, cutting-edge web experiences, and intelligent AI automation to build a scalable engine for your brand.
+          <p className="text-base sm:text-lg text-slate-600 leading-loose">
+            Everything your business needs to attract customers,<br className="hidden sm:block" /> build credibility, and save valuable time.
           </p>
         </div>
 
-        {/* Navigation / Anchors */}
-        <div className="flex justify-center gap-4 mb-16 flex-wrap">
-          <a href="#marketing" className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 shadow-sm transition-all">
-            Marketing Ads
-          </a>
-          <a href="#web-design" className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 shadow-sm transition-all">
-            Website Design
-          </a>
-          <a href="#automation" className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 hover:border-gray-900 hover:text-gray-900 shadow-sm transition-all">
-            AI & Automation
-          </a>
+        {/* Services List */}
+        <div className="space-y-12 sm:space-y-16">
+          {serviceList.map((service, index) => (
+            <section
+              key={service.id}
+              id={service.id}
+              className="scroll-mt-28 bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 lg:p-12 hover:border-slate-300 hover:shadow-md transition-all"
+            >
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8 pb-8 border-b border-slate-100">
+                <div className="flex items-start gap-4">
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: service.accentBg }}
+                  >
+                    {service.icon}
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Service 0{index + 1}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+                      {service.title}
+                    </h2>
+                    <p className="text-base sm:text-lg font-medium text-slate-700 mt-2">
+                      {service.tagline}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="shrink-0">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm text-white transition-all shadow-sm active:scale-[0.98]"
+                    style={{ backgroundColor: service.accentColor }}
+                  >
+                    Get a quote
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div className="lg:col-span-7">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-4">
+                    What is included
+                  </h3>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <div
+                          className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                          style={{ backgroundColor: service.accentBg }}
+                        >
+                          <Check className="w-3.5 h-3.5" style={{ color: service.accentColor }} />
+                        </div>
+                        <span className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="lg:col-span-5 bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                      Who this is for
+                    </h3>
+                    <p className="text-sm text-slate-700 leading-relaxed">
+                      {service.idealFor}
+                    </p>
+                  </div>
+
+                  <div className="pt-6 mt-6 border-t border-slate-200/60">
+                    <p className="text-xs text-slate-500">
+                      Transparent pricing with zero hidden fees.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          ))}
         </div>
 
-        {/* A. Social Media Marketing */}
-        <section id="marketing" className="scroll-mt-24 mb-24 bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 text-emerald-600 mb-4">
-                <TrendingUp className="w-6 h-6" />
-                <span className="font-bold uppercase tracking-wider text-sm">Growth Engine</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Social Media Marketing
-              </h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                Connect directly with your ideal customers through highly tailored Facebook, Instagram, and LinkedIn ad campaigns. We handle everything from audience targeting to creative copywriting.
-              </p>
-              
-              <h3 className="font-semibold text-gray-900 mb-3">What We Do:</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {[
-                  "Facebook & Instagram Ads",
-                  "Targeted Lead Generation",
-                  "Content & Creative Strategy",
-                  "Brand & Engagement Growth"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 shrink-0" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Who It's For</h4>
-                <p className="text-gray-700 font-medium">Businesses needing a predictable, consistent flow of new customer inquiries and online leads.</p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Key Benefits</h3>
-              <div className="space-y-4">
-                {[
-                  { title: "Increased Brand Visibility", desc: "Show up directly in the feeds of people who are looking for you." },
-                  { title: "Targeted Customer Acquisition", desc: "Don't waste budget showing ads to individuals outside your market." },
-                  { title: "Measurable ROI", desc: "Clear analytics showing how much you spend and the revenue generated." },
-                  { title: "Consistent Online Presence", desc: "Build authority and stay top-of-mind with prospective buyers." }
-                ].map((benefit, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-xs font-bold text-emerald-700">{idx + 1}</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 text-sm">{benefit.title}</h4>
-                      <p className="text-xs sm:text-sm text-gray-500 mt-0.5">{benefit.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <Link to="/contact" className="w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm sm:text-base font-semibold transition-all inline-flex items-center justify-center gap-2">
-                  Launch Campaign
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* B. Website Design */}
-        <section id="web-design" className="scroll-mt-24 mb-24 bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-5 order-last lg:order-first bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Key Benefits</h3>
-              <div className="space-y-4">
-                {[
-                  { title: "Professional Brand Image", desc: "A stunning, world-class presentation that outshines your competitors." },
-                  { title: "Mobile-First Approach", desc: "Flawless rendering and snappy interaction on iPhones and Androids." },
-                  { title: "Conversion-Optimized", desc: "Designed deliberately with structured call-to-actions to prompt bookings." },
-                  { title: "Fast Loading Speeds", desc: "Optimized code built with Vite/React to achieve instant page loads." }
-                ].map((benefit, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-xs font-bold text-blue-700">{idx + 1}</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 text-sm">{benefit.title}</h4>
-                      <p className="text-xs sm:text-sm text-gray-500 mt-0.5">{benefit.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <Link to="/contact" className="w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm sm:text-base font-semibold transition-all inline-flex items-center justify-center gap-2">
-                  Design Your Site
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 text-blue-600 mb-4">
-                <Monitor className="w-6 h-6" />
-                <span className="font-bold uppercase tracking-wider text-sm">Digital Presence</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Website Design & Development
-              </h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                Your website is your 24/7 digital storefront. We design highly-customized, lightning-fast business websites and lead-generating landing pages that build credibility and turn simple clicks into real customers.
-              </p>
-              
-              <h3 className="font-semibold text-gray-900 mb-3">What We Do:</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {[
-                  "Custom Business Websites",
-                  "High-Converting Landing Pages",
-                  "Fully Responsive Layouts",
-                  "Interactive UI & Smooth UX"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 shrink-0" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Who It's For</h4>
-                <p className="text-gray-700 font-medium">Businesses looking to establish brand trust, upgrade their legacy websites, or drive traffic to a dedicated product release.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* C. AI & Software Automation */}
-        <section id="automation" className="scroll-mt-24 mb-12 bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 text-purple-600 mb-4">
-                <Cpu className="w-6 h-6" />
-                <span className="font-bold uppercase tracking-wider text-sm">Smart Systems</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                AI & Software Automation
-              </h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                We build smart systems that reduce manual work and help businesses operate faster. Free your staff from copying data, emailing reminders, or manually answering standard inquiries.
-              </p>
-              
-              <h3 className="font-semibold text-gray-900 mb-3">What We Automate:</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                {[
-                  "Customer Support Chatbots",
-                  "Appointment Scheduling",
-                  "CRM Lead Management",
-                  "Invoice & Payment Tracking",
-                  "Staff Workflow Approvals",
-                  "Inventory Syncing Systems",
-                  "Email Follow-up Workflows",
-                  "Data Parsing & Reports"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-emerald-500 shrink-0" />
-                    <span className="text-gray-700 font-medium text-sm sm:text-base">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Who It's For</h4>
-                <p className="text-gray-700 font-medium">Businesses with repetitive manual processes looking to scale operations and reduce operational overhead.</p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Key Benefits</h3>
-              <div className="space-y-4">
-                {[
-                  { title: "Save Dozens of Hours Weekly", desc: "Automate boring tasks and free up your staff for high-value work." },
-                  { title: "Drastically Reduce Errors", desc: "Software runs accurately every time without manual entry mistakes." },
-                  { title: "Scale Operations Effortlessly", desc: "Process double the volume of bookings and leads without hiring limits." },
-                  { title: "Instant Customer Responses", desc: "AI bots and triggers answer inquiries in seconds, day or night." }
-                ].map((benefit, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-xs font-bold text-purple-700">{idx + 1}</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 text-sm">{benefit.title}</h4>
-                      <p className="text-xs sm:text-sm text-gray-500 mt-0.5">{benefit.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <Link to="/contact" className="w-full py-3 px-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm sm:text-base font-semibold transition-all inline-flex items-center justify-center gap-2">
-                  Request Automation
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Bottom CTA Block */}
+        <div className="mt-16 sm:mt-24 text-center bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12">
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+            Not sure which service is right for you?
+          </h2>
+          <p className="text-slate-600 max-w-xl mx-auto mb-8 text-base leading-loose">
+            Tell us about your business and we will suggest the most practical, cost-effective setup for your goals.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block px-10 py-4 bg-[#0C447C] hover:bg-[#08335D] text-white rounded-full font-bold text-base transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
+          >
+            Get a free quote
+          </Link>
+        </div>
       </div>
     </div>
   )

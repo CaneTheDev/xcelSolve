@@ -1,175 +1,122 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Eye, Award, Activity, Check, ArrowRight, Zap, Database, Cpu, TrendingUp, Monitor } from 'lucide-react'
+import { ArrowRight, ShieldCheck, Zap, Headphones } from 'lucide-react'
+import useIsMobile from '../hooks/useIsMobile'
+import AboutMobile from './About.mobile'
 
 function About() {
+  const isMobile = useIsMobile()
+
+  const whyChooseUs = [
+    {
+      title: 'Built specifically for small business needs, not bloated templates',
+      description: 'We do not load down your website with complicated plug-ins or confusing dashboards. You get a clean, tailored tool that serves your customers quickly.',
+      icon: <Zap className="w-5 h-5 text-[#0C447C]" />
+    },
+    {
+      title: 'Fast turnaround and clear, honest pricing',
+      description: 'We agree on scope and pricing upfront before we write a single line of code. No hidden surprise invoices or endless project delays.',
+      icon: <ShieldCheck className="w-5 h-5 text-[#0F6E56]" />
+    },
+    {
+      title: 'Ongoing support after the site goes live',
+      description: 'We do not disappear once your website launches. Whenever you need updates, edits, or advice, we are just a quick message away.',
+      icon: <Headphones className="w-5 h-5 text-[#534AB7]" />
+    }
+  ]
+
+  if (isMobile) {
+    return <AboutMobile />
+  }
+
   return (
-    <div className="relative min-h-screen bg-gray-50 overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.15]" style={{ color: '#000' }}>
-        <svg width="100%" height="100%">
+    <div className="bg-white py-12 sm:py-20 min-h-[calc(100vh-144px)] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="about-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-              <circle cx="16" cy="16" r="1.5" fill="currentColor" />
+            <pattern id="about-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+              <polygon points="60,10 90,50 60,90 30,50" fill="#0C447C" />
+              <polygon points="10,60 25,80 10,100 -5,80" fill="#0C447C" />
+              <polygon points="110,60 125,80 110,100 95,80" fill="#0C447C" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#about-grid)" />
+          <rect width="100%" height="100%" fill="url(#about-pattern)" />
         </svg>
       </div>
 
-      {/* Gradient Orbs */}
-      <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-24 left-1/3 w-[500px] h-[500px] bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="px-3 py-1 text-xs font-semibold text-emerald-700 bg-emerald-100 rounded-full uppercase tracking-wider">
-            Our Story
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
-            We Build Systems for
-            <br className="hidden sm:inline" />
-            <span className="relative inline-block mt-2">
-              <span className="relative z-10 px-3">Modern Growth</span>
-              <span className="absolute inset-0 bg-emerald-300 -skew-y-1 transform"></span>
-            </span>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Page Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Helping UK small businesses grow online
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-            XcelSolve is a tech-focused agency built to help businesses attract more customers, establish strong digital trust, and operate at maximum efficiency.
+        </div>
+
+        {/* Main Narrative Card */}
+        <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-7 sm:p-10 mb-12">
+          <p className="text-lg sm:text-xl text-slate-800 leading-relaxed font-normal mb-6">
+            xcelsolve works with small businesses across the UK (tradespeople, salons, cafes, and local professional services) to build simple, effective websites that bring in customers.
+          </p>
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            We focus on what actually works for small businesses: a clean, fast website that is easy to find, easy to update, and built to convert visitors into paying customers. No jargon, no unnecessary extras: just a site that does its job.
           </p>
         </div>
 
-        {/* The Vision Section */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-            {/* Left side: Core Philosophy details */}
-            <div className="lg:col-span-8">
-              <div className="flex items-center gap-3 text-emerald-600 mb-4">
-                <Eye className="w-6 h-6" />
-                <span className="font-bold uppercase tracking-wider text-sm">The Vision</span>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Core Philosophy
-              </h2>
-              <p className="text-gray-600 text-base mb-8 leading-relaxed">
-                At XcelSolve, we believe technology should be an accelerator, not a bottleneck. We stand for simple, high-performing systems that deliver clear results removing complexity so your business can focus on what it does best.
-              </p>
+        {/* Why Choose Us */}
+        <div className="mb-14 sm:mb-18">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 text-center sm:text-left">
+            Why choose us
+          </h2>
 
-              {/* Grid of philosophy cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {[
-                  {
-                    icon: <Zap className="w-5 h-5 text-emerald-600" />,
-                    title: "Simplicity First",
-                    desc: "We build intuitive solutions. No over-engineered bloat, just systems that work."
-                  },
-                  {
-                    icon: <Activity className="w-5 h-5 text-blue-600" />,
-                    title: "Tangible ROI",
-                    desc: "We focus on real metrics: hours saved, leads captured, and conversion rates."
-                  },
-                  {
-                    icon: <Database className="w-5 h-5 text-purple-600" />,
-                    title: "Rapid Execution",
-                    desc: "We deliver quickly, communicate transparently, and iterate in real-time."
-                  }
-                ].map((pill, idx) => (
-                  <div key={idx} className="p-5 bg-gray-50 border border-gray-150 rounded-xl hover:border-gray-300 transition-colors flex flex-col">
-                    <div className="mb-3 p-2 bg-white rounded-lg border border-gray-200/60 inline-self-start self-start">
-                      {pill.icon}
-                    </div>
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">{pill.title}</h4>
-                    <p className="text-xs text-gray-500 leading-relaxed flex-grow">{pill.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right side: Stand For list */}
-            <div className="lg:col-span-4 bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 relative overflow-hidden self-start">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-100 rounded-full filter blur-xl opacity-40 -mr-6 -mt-6"></div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">What We Stand For</h3>
-              <ul className="space-y-4">
-                {[
-                  "Result-oriented systems",
-                  "Mobile-first, conversion-focused design",
-                  "Eliminating repetitive manual labor",
-                  "Fast delivery and transparent iterations"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex gap-2.5 text-xs sm:text-sm text-gray-700">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* How We Drive Growth (Pillars Grid) */}
-        <div className="mb-16">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="px-3 py-1 text-xs font-semibold text-blue-700 bg-blue-100 rounded-full uppercase tracking-wider">
-              Our Capabilities
-            </span>
-            <h3 className="text-3xl font-bold text-gray-900 mt-3">How We Drive Growth</h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: <TrendingUp className="w-6 h-6 text-emerald-600" />,
-                title: "Performance Ads",
-                desc: "High-yield paid campaigns targeting qualified buyers on Facebook, Instagram, and LinkedIn."
-              },
-              {
-                icon: <Monitor className="w-6 h-6 text-blue-600" />,
-                title: "Snappy Interfaces",
-                desc: "Mobile-optimized, conversion-focused custom websites built for lightning-fast speeds."
-              },
-              {
-                icon: <Cpu className="w-6 h-6 text-purple-600" />,
-                title: "Smart Workflows",
-                desc: "AI chatbots, automated scheduling, and auto-sync systems to manage leads."
-              },
-              {
-                icon: <Award className="w-6 h-6 text-indigo-600" />,
-                title: "Unified Team",
-                desc: "A singular partner handling design, development, and marketing from end to end."
-              }
-            ].map((pillar, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div className="mb-4 p-3 bg-gray-50 rounded-xl border border-gray-100 inline-self-start self-start">
-                  {pillar.icon}
+          <div className="grid grid-cols-1 gap-4">
+            {whyChooseUs.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-slate-300 hover:shadow-sm transition-all flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 mt-0.5">
+                  {item.icon}
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{pillar.title}</h4>
-                <p className="text-sm text-gray-500 leading-relaxed flex-grow">{pillar.desc}</p>
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Final CTA */}
-        <div className="bg-gray-900 rounded-3xl p-8 sm:p-12 text-center text-white relative overflow-hidden border border-gray-800">
-          <div className="absolute inset-0 opacity-[0.05]" style={{ color: '#fff' }}>
-            <svg width="100%" height="100%">
-              <rect width="100%" height="100%" fill="url(#about-grid)" />
-            </svg>
+        {/* Founder Note Card */}
+        <div className="bg-white border-2 border-[#0C447C]/15 rounded-3xl p-7 sm:p-10 mb-14 shadow-sm relative overflow-hidden">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6 mb-6">
+            <div className="w-16 h-16 rounded-full bg-[#0C447C] text-white flex items-center justify-center font-bold text-2xl font-outfit shadow-sm shrink-0">
+              I
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-slate-900">Ismail</h3>
+              <p className="text-sm font-medium text-slate-500">Founder, xcelsolve</p>
+            </div>
           </div>
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to accelerate your operations?</h3>
-            <p className="text-gray-400 text-sm sm:text-base mb-8 leading-relaxed">
-              Let's craft the modern systems and campaigns your business needs to grow. Our team is ready to analyze your processes and build for scale.
-            </p>
-            <Link to="/contact" className="px-8 py-4 bg-white hover:bg-gray-100 text-gray-900 rounded-lg font-bold transition-all inline-flex items-center gap-2 text-base">
-              Start Your Journey
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+
+          <blockquote className="text-base sm:text-lg text-slate-700 italic leading-relaxed border-l-2 border-[#0C447C] pl-4 sm:pl-6 my-2">
+            "I started xcelsolve to help small businesses get online without the confusion or high cost that usually comes with it. Every client gets a website built around what their business actually needs."
+          </blockquote>
         </div>
 
+        {/* CTA */}
+        <div className="text-center pt-4">
+          <Link
+            to="/contact"
+            className="inline-block px-10 py-4 bg-[#0C447C] hover:bg-[#08335D] text-white rounded-full font-bold text-base transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
+          >
+            Get a free quote
+          </Link>
+        </div>
       </div>
     </div>
   )

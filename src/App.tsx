@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import BottomNav from './components/BottomNav.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import About from './pages/About.jsx'
@@ -31,7 +32,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-gray-50 text-gray-700 antialiased">
+      <div className="flex flex-col min-h-screen bg-white text-slate-800 antialiased">
         {/* Navigation Header */}
         <Header />
 
@@ -49,6 +50,9 @@ function App() {
 
         {/* Footer */}
         <Footer />
+
+        {/* Mobile Bottom Navigation */}
+        <BottomNav />
       </div>
     </BrowserRouter>
   )
