@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Globe, Share2, Sparkles } from 'lucide-react'
 import useIsMobile from '../hooks/useIsMobile'
 import HomeMobile from './Home.mobile'
@@ -39,7 +40,33 @@ function Home() {
   }
 
   return (
-    <div className="bg-white min-h-[calc(100vh-144px)] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>xcelsolve | Simple, Fast Websites for UK Small Businesses</title>
+        <meta name="description" content="Simple, fast, affordable websites built for tradespeople and UK small businesses. Get a clean, mobile-friendly website that brings in customers." />
+        <link rel="canonical" href="https://xcelsolve.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://xcelsolve.com/" />
+        <meta property="og:title" content="xcelsolve | Simple, Fast Websites for UK Small Businesses" />
+        <meta property="og:description" content="Simple, fast, affordable websites built for tradespeople and UK small businesses. Get a clean, mobile-friendly website that brings in customers." />
+        <meta property="og:image" content="https://xcelsolve.com/images/card.webp" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "xcelsolve",
+            "url": "https://xcelsolve.com",
+            "logo": "https://xcelsolve.com/xcelsolvs-icon.svg",
+            "description": "Simple, fast, affordable websites built for tradespeople and UK small businesses",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "GB"
+            },
+            "sameAs": []
+          })}
+        </script>
+      </Helmet>
+      <div className="bg-white min-h-[calc(100vh-144px)] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -115,6 +142,7 @@ function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

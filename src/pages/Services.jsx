@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Globe, Share2, Sparkles, Check, ArrowRight } from 'lucide-react'
 import useIsMobile from '../hooks/useIsMobile'
 import ServicesMobile from './Services.mobile'
@@ -63,7 +64,62 @@ function Services() {
   }
 
   return (
-    <div className="bg-white py-12 sm:py-20 min-h-[calc(100vh-144px)] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Our Services - Website Design, Social Media & AI Automation | xcelsolve</title>
+        <meta name="description" content="Professional website design, social media marketing, and AI automation services for UK small businesses. Simple solutions that bring results." />
+        <link rel="canonical" href="https://xcelsolve.com/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://xcelsolve.com/services" />
+        <meta property="og:title" content="Our Services - Website Design, Social Media & AI Automation | xcelsolve" />
+        <meta property="og:description" content="Professional website design, social media marketing, and AI automation services for UK small businesses. Simple solutions that bring results." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Web Design and Digital Marketing",
+            "provider": {
+              "@type": "Organization",
+              "name": "xcelsolve"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "United Kingdom"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Digital Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Website Design",
+                    "description": "Simple, mobile-friendly websites built to bring in customers"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Social Media Marketing",
+                    "description": "Grow your local presence and stay visible to nearby customers"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI and Automation",
+                    "description": "Save time on repetitive admin and customer follow-up"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
+      </Helmet>
+      <div className="bg-white py-12 sm:py-20 min-h-[calc(100vh-144px)] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -190,6 +246,7 @@ function Services() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { ArrowRight, ShieldCheck, Zap, Headphones } from 'lucide-react'
 import useIsMobile from '../hooks/useIsMobile'
 import AboutMobile from './About.mobile'
@@ -30,7 +31,32 @@ function About() {
   }
 
   return (
-    <div className="bg-white py-12 sm:py-20 min-h-[calc(100vh-144px)] relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>About Us - Helping UK Small Businesses Grow Online | xcelsolve</title>
+        <meta name="description" content="xcelsolve works with small businesses across the UK to build simple, effective websites. Transparent pricing, fast turnaround, and ongoing support." />
+        <link rel="canonical" href="https://xcelsolve.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://xcelsolve.com/about" />
+        <meta property="og:title" content="About Us - Helping UK Small Businesses Grow Online | xcelsolve" />
+        <meta property="og:description" content="xcelsolve works with small businesses across the UK to build simple, effective websites. Transparent pricing, fast turnaround, and ongoing support." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "xcelsolve",
+              "founder": {
+                "@type": "Person",
+                "givenName": "Ismail"
+              },
+              "description": "We work with small businesses across the UK to build simple, effective websites that bring in customers"
+            }
+          })}
+        </script>
+      </Helmet>
+      <div className="bg-white py-12 sm:py-20 min-h-[calc(100vh-144px)] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -119,6 +145,7 @@ function About() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
