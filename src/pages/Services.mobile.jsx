@@ -7,51 +7,51 @@ function ServicesMobile() {
 
   const serviceList = [
     {
-      id: 'websites',
-      title: 'Websites',
-      tagline: 'Simple, mobile-friendly websites built to bring in customers.',
+      id: 'galleries',
+      title: 'Photo-led project galleries',
+      tagline: 'Let your finished work sell for you.',
       accentColor: '#0F6E56',
       accentBg: '#E7F6F1',
       icon: <Globe className="w-5 h-5" style={{ color: '#0F6E56' }} />,
-      idealFor: 'Tradespeople, salons, cafes, clinics, and local professional services needing an effective online presence.',
+      idealFor: 'Showcase your portfolio immediately.',
       features: [
-        'Designed specifically for mobile phones and tablets',
-        'Fast loading speeds with zero clutter',
-        'Clear call-to-action buttons',
-        'Easy to update and maintain',
-        'Search-friendly structure'
+        'Full-width project galleries',
+        'Before/after sliders',
+        'Mobile-optimized photos',
+        'Fast-loading images',
+        'Organized by type'
       ]
     },
     {
-      id: 'social-media',
-      title: 'Social media marketing',
-      tagline: 'Grow your local presence and stay visible to nearby customers.',
+      id: 'contact',
+      title: 'Quote request forms',
+      tagline: 'Make it easy for homeowners to reach you.',
       accentColor: '#D85A30',
       accentBg: '#FDEFEA',
       icon: <Share2 className="w-5 h-5" style={{ color: '#D85A30' }} />,
-      idealFor: 'Businesses wanting to stay active, build trust, and reach local clients in their immediate service area.',
+      idealFor: 'Never lose a lead again.',
       features: [
-        'Targeted local visibility campaigns',
-        'Clear, straightforward messaging',
-        'Consistent digital presence',
-        'Lead generation campaigns',
-        'Transparent progress tracking'
+        'Tap-to-call buttons',
+        'Simple quote forms',
+        'Direct email routing',
+        'Mobile-friendly contact',
+        'Quick capture'
       ]
     },
     {
-      id: 'ai-automation',
-      title: 'AI and automation',
-      tagline: 'Save time on repetitive admin and customer follow-up.',
+      id: 'performance',
+      title: 'Fast, lean pages',
+      tagline: 'Sites that load quickly on every device.',
       accentColor: '#534AB7',
       accentBg: '#EFEFFC',
       icon: <Sparkles className="w-5 h-5" style={{ color: '#534AB7' }} />,
-      idealFor: 'Busy owners who spend too many evening hours answering repetitive questions and sending quotes.',
+      idealFor: 'Performance on weak signals.',
       features: [
-        'Automated initial responses',
-        'Smart appointment reminders',
-        'Automated customer follow-ups',
-        'Simple intake forms',
-        'Practical, easy-to-use setups'
+        'No bloated templates',
+        'Compressed images',
+        'Minimal design',
+        'Mobile-first',
+        'Reliable hosting'
       ]
     }
   ]
@@ -78,10 +78,10 @@ function ServicesMobile() {
         {/* Page Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-black text-slate-900 tracking-tight leading-[1.1] mb-4">
-            Simple services built for real results
+            What you get
           </h1>
           <p className="text-base text-slate-600 leading-relaxed">
-            Everything your business needs to attract customers and save time.
+            Everything a kitchen & bath remodeler needs to turn visitors into quote requests.
           </p>
         </div>
 
@@ -182,17 +182,17 @@ function ServicesMobile() {
         {/* Bottom CTA Block */}
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
           <h2 className="text-2xl font-black text-slate-900 mb-3 tracking-tight">
-            Not sure which service is right?
+            Ready to see your homepage?
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed mb-5">
-            Tell us about your business and we&apos;ll suggest the most practical setup for your goals.
+            We&apos;ll design a free preview for your business. No obligation, no pressure.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-[#0C447C] hover:bg-[#08335D] active:bg-[#062949] text-white rounded-xl font-semibold text-sm transition-all shadow-md active:scale-[0.97]"
             style={{ touchAction: 'manipulation' }}
           >
-            Get a free quote
+            Get your free homepage preview
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

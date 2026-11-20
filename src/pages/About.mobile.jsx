@@ -5,18 +5,18 @@ import { ArrowRight, ShieldCheck, Zap, Headphones } from 'lucide-react'
 function AboutMobile() {
   const whyChooseUs = [
     {
-      title: 'Built for small business needs',
-      description: 'Clean, tailored tools that serve your customers quickly without complicated plugins or confusing dashboards.',
+      title: 'Built for kitchen & bath remodelers',
+      description: 'Every site is designed to showcase your projects and convert visitors into quote requests.',
       icon: <Zap className="w-5 h-5 text-[#0C447C]" />
     },
     {
-      title: 'Fast and honest pricing',
-      description: 'We agree on scope and pricing upfront. No hidden surprise invoices or endless project delays.',
+      title: 'Preview before you pay',
+      description: 'See your own homepage design first. If you don\'t love it, you owe nothing.',
       icon: <ShieldCheck className="w-5 h-5 text-[#0F6E56]" />
     },
     {
       title: 'Ongoing support',
-      description: "We don't disappear after launch. Whenever you need updates or advice, we're just a message away.",
+      description: "We don't disappear after launch. Need updates or changes? We're just a message away.",
       icon: <Headphones className="w-5 h-5 text-[#534AB7]" />
     }
   ]
@@ -39,17 +39,17 @@ function AboutMobile() {
         {/* Page Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-black text-slate-900 tracking-tight leading-[1.1] mb-4">
-            Helping UK small businesses grow online
+            Premium websites for kitchen & bath pros
           </h1>
         </div>
 
         {/* Main Narrative Card */}
         <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 mb-8">
           <p className="text-base text-slate-800 leading-relaxed font-normal mb-4">
-            xcelsolve works with small businesses across the UK - tradespeople, salons, cafes, and local professional services - to build simple, effective websites that bring in customers.
+            xcelsolve builds premium websites exclusively for kitchen and bath remodelers across the US.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed">
-            We focus on what actually works: a clean, fast website that&apos;s easy to find, easy to update, and built to convert visitors into paying customers.
+            We focus on what remodelers need: photo-led galleries, before/after sliders, quote forms that convert, and pages that load fast on every phone.
           </p>
         </div>
 
@@ -94,7 +94,7 @@ function AboutMobile() {
           </div>
 
           <blockquote className="text-base text-slate-700 italic leading-relaxed border-l-2 border-[#0C447C] pl-4">
-            &quot;I started xcelsolve to help small businesses get online without the confusion or high cost. Every client gets a website built around what their business actually needs.&quot;
+            &quot;I started xcelsolve to focus on one industry and do it right. Kitchen and bath remodelers deserve sites that match the quality of their work—that&apos;s what we build.&quot;
           </blockquote>
         </div>
 

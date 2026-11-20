@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { MessageCircle, Mail, Phone } from 'lucide-react'
+import { Mail, Phone } from 'lucide-react'
 import BrandIcon from './BrandIcon.jsx'
 
 function Footer() {
@@ -41,7 +41,7 @@ function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-600 leading-relaxed max-w-xs">
-              Simple, fast, affordable websites built for UK tradespeople and local businesses.
+              Premium websites built exclusively for kitchen and bath remodelers.
             </p>
           </div>
 
@@ -51,9 +51,7 @@ function Footer() {
             <ul className="space-y-3">
               {[
                 { name: 'Home', path: '/' },
-                { name: 'Services', path: '/services' },
-                { name: 'About', path: '/about' },
-                { name: 'Contact', path: '/contact' }
+                { name: 'Services', path: '/services' }
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -87,25 +85,13 @@ function Footer() {
               </a>
               
               <a 
-                href="https://wa.me/message/CCYY5ZK3RKITJ1" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-3 text-sm text-slate-600 hover:text-slate-900 transition-colors group"
-              >
-                <div className="w-9 h-9 bg-slate-100 group-hover:bg-slate-200 rounded flex items-center justify-center transition-colors">
-                  <MessageCircle className="w-4 h-4 text-[#0F6E56]" />
-                </div>
-                Chat on WhatsApp
-              </a>
-              
-              <a 
-                href="tel:+447520682782" 
+                href="tel:+12099332393" 
                 className="flex items-center gap-3 text-sm text-slate-600 hover:text-slate-900 transition-colors group"
               >
                 <div className="w-9 h-9 bg-slate-100 group-hover:bg-slate-200 rounded flex items-center justify-center transition-colors">
                   <Phone className="w-4 h-4 text-slate-700" />
                 </div>
-                +44 7520 682782
+                +1 (209) 933-2393
               </a>
             </div>
           </div>
@@ -115,9 +101,6 @@ function Footer() {
         <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-600">
             © {currentYear} xcelsolve. All rights reserved.
-          </p>
-          <p className="text-sm text-slate-600">
-            Built for UK small businesses
           </p>
         </div>
       </div>

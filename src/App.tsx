@@ -35,8 +35,11 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen bg-white text-slate-800 antialiased">
-          {/* Navigation Header */}
-          <Header />
+          {/* Navigation Header - Hidden on Home page */}
+          <Routes>
+            <Route path="/" element={null} />
+            <Route path="*" element={<Header />} />
+          </Routes>
 
           {/* Main Content Area */}
           <main className="flex-grow">

@@ -10,18 +10,18 @@ function About() {
 
   const whyChooseUs = [
     {
-      title: 'Built specifically for small business needs, not bloated templates',
-      description: 'We do not load down your website with complicated plug-ins or confusing dashboards. You get a clean, tailored tool that serves your customers quickly.',
+      title: 'Built specifically for kitchen & bath remodelers',
+      description: 'We only work in this niche. Every site is designed to showcase your projects and convert visitors into quote requests.',
       icon: <Zap className="w-5 h-5 text-[#0C447C]" />
     },
     {
-      title: 'Fast turnaround and clear, honest pricing',
-      description: 'We agree on scope and pricing upfront before we write a single line of code. No hidden surprise invoices or endless project delays.',
+      title: 'Preview your homepage before you pay',
+      description: 'See your own homepage design first. If you don\'t love it, you owe nothing. No risk, no pressure.',
       icon: <ShieldCheck className="w-5 h-5 text-[#0F6E56]" />
     },
     {
-      title: 'Ongoing support after the site goes live',
-      description: 'We do not disappear once your website launches. Whenever you need updates, edits, or advice, we are just a quick message away.',
+      title: 'Ongoing support after launch',
+      description: 'We don\'t disappear once your website goes live. Need updates or changes? We\'re just a message away.',
       icon: <Headphones className="w-5 h-5 text-[#534AB7]" />
     }
   ]
@@ -33,13 +33,13 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About Us - Helping UK Small Businesses Grow Online | xcelsolve</title>
-        <meta name="description" content="xcelsolve works with small businesses across the UK to build simple, effective websites. Transparent pricing, fast turnaround, and ongoing support." />
+        <title>About Us - Premium Websites for Kitchen & Bath Remodelers | xcelsolve</title>
+        <meta name="description" content="xcelsolve builds premium websites exclusively for kitchen and bath remodelers across the US. Transparent pricing, preview before you pay, and ongoing support." />
         <link rel="canonical" href="https://xcelsolve.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://xcelsolve.com/about" />
-        <meta property="og:title" content="About Us - Helping UK Small Businesses Grow Online | xcelsolve" />
-        <meta property="og:description" content="xcelsolve works with small businesses across the UK to build simple, effective websites. Transparent pricing, fast turnaround, and ongoing support." />
+        <meta property="og:title" content="About Us - Premium Websites for Kitchen & Bath Remodelers | xcelsolve" />
+        <meta property="og:description" content="xcelsolve builds premium websites exclusively for kitchen and bath remodelers across the US. Transparent pricing, preview before you pay, and ongoing support." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -51,7 +51,7 @@ function About() {
                 "@type": "Person",
                 "givenName": "Ismail"
               },
-              "description": "We work with small businesses across the UK to build simple, effective websites that bring in customers"
+              "description": "We build premium websites exclusively for kitchen and bath remodelers across the US"
             }
           })}
         </script>
@@ -75,17 +75,17 @@ function About() {
         {/* Page Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-            Helping UK small businesses grow online
+            Premium websites for kitchen & bath pros
           </h1>
         </div>
 
         {/* Main Narrative Card */}
         <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-7 sm:p-10 mb-12">
           <p className="text-lg sm:text-xl text-slate-800 leading-relaxed font-normal mb-6">
-            xcelsolve works with small businesses across the UK (tradespeople, salons, cafes, and local professional services) to build simple, effective websites that bring in customers.
+            xcelsolve builds premium websites exclusively for kitchen and bath remodelers across the US.
           </p>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            We focus on what actually works for small businesses: a clean, fast website that is easy to find, easy to update, and built to convert visitors into paying customers. No jargon, no unnecessary extras: just a site that does its job.
+            We focus on what remodelers need: photo-led galleries, before/after sliders, quote forms that convert, and pages that load fast on every phone. No templates, no generic designs—just sites built for your work.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ function About() {
           </div>
 
           <blockquote className="text-base sm:text-lg text-slate-700 italic leading-relaxed border-l-2 border-[#0C447C] pl-4 sm:pl-6 my-2">
-            "I started xcelsolve to help small businesses get online without the confusion or high cost that usually comes with it. Every client gets a website built around what their business actually needs."
+            "I started xcelsolve to focus on one industry and do it right. Kitchen and bath remodelers deserve sites that match the quality of their work—that's what we build."
           </blockquote>
         </div>
 

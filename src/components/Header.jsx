@@ -18,9 +18,7 @@ function Header() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Services', path: '/services' }
   ]
 
   return (
@@ -60,7 +58,7 @@ function Header() {
               to="/contact" 
               className="px-5 py-2.5 bg-[#0C447C] hover:bg-[#08335D] text-white rounded-lg text-sm font-semibold transition-all shadow-sm active:scale-[0.98]"
             >
-              Get a free quote
+              Call
             </Link>
           </div>
 
@@ -103,7 +101,7 @@ function Header() {
                 onClick={closeMenu}
                 className="block w-full text-center py-3.5 bg-[#0C447C] hover:bg-[#08335D] text-white rounded-lg font-semibold transition-all shadow-sm"
               >
-                Get a free quote
+                Call
               </Link>
             </div>
           </div>

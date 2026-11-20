@@ -136,7 +136,7 @@ function ContactMobile() {
 
           {/* Phone Action */}
           <a
-            href="tel:+447520682782"
+            href="tel:+12099332393"
             className="flex items-center p-4 rounded-xl bg-slate-50 border border-slate-200 active:border-slate-800 active:shadow-md transition-all"
             style={{ touchAction: 'manipulation' }}
           >
@@ -145,8 +145,8 @@ function ContactMobile() {
             </div>
             <div className="ml-4 flex-1">
               <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone</div>
-              <h3 className="font-bold text-slate-900 text-base">+44 7520 682782</h3>
-              <p className="text-xs text-slate-600 mt-0.5">UK direct line</p>
+              <h3 className="font-bold text-slate-900 text-base">+1 (209) 933-2393</h3>
+              <p className="text-xs text-slate-600 mt-0.5">US direct line</p>
             </div>
             <ArrowRight className="w-5 h-5 text-slate-500 shrink-0" />
           </a>

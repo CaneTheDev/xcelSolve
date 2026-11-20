@@ -83,12 +83,12 @@ function Contact() {
     <>
       <Helmet>
         <title>Contact Us - Get a Free Quote | xcelsolve</title>
-        <meta name="description" content="Get in touch for a free quote on web design, social media marketing, or AI automation. Message us on WhatsApp, email, or call +44 7520 682782." />
+        <meta name="description" content="Get in touch for a free quote on web design for kitchen and bath remodelers. Message us on WhatsApp, email, or call +1 (209) 933-2393." />
         <link rel="canonical" href="https://xcelsolve.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://xcelsolve.com/contact" />
         <meta property="og:title" content="Contact Us - Get a Free Quote | xcelsolve" />
-        <meta property="og:description" content="Get in touch for a free quote on web design, social media marketing, or AI automation. Message us on WhatsApp, email, or call +44 7520 682782." />
+        <meta property="og:description" content="Get in touch for a free quote on web design for kitchen and bath remodelers. Message us on WhatsApp, email, or call +1 (209) 933-2393." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -97,12 +97,12 @@ function Contact() {
               "@type": "Organization",
               "name": "xcelsolve",
               "email": "info@xcelsolve.com",
-              "telephone": "+447520682782",
+              "telephone": "+12099332393",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+447520682782",
+                "telephone": "+12099332393",
                 "contactType": "Customer Service",
-                "areaServed": "GB",
+                "areaServed": "US",
                 "availableLanguage": "en"
               }
             }
@@ -171,7 +171,7 @@ function Contact() {
 
           {/* Phone Action */}
           <a
-            href="tel:+447520682782"
+            href="tel:+12099332393"
             className="flex flex-col p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-[#0C447C] hover:shadow-md transition-all group"
           >
             <div className="w-10 h-10 rounded-xl bg-slate-800 text-white flex items-center justify-center shrink-0 shadow-sm mb-3">
@@ -179,8 +179,8 @@ function Contact() {
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone</span>
-              <h3 className="font-bold text-slate-900 text-base mt-0.5">+44 7520 682782</h3>
-              <p className="text-xs text-slate-600 mt-1">UK direct line</p>
+              <h3 className="font-bold text-slate-900 text-base mt-0.5">+1 (209) 933-2393</h3>
+              <p className="text-xs text-slate-600 mt-1">US direct line</p>
             </div>
           </a>
         </div>

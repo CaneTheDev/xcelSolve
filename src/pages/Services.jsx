@@ -10,51 +10,51 @@ function Services() {
 
   const serviceList = [
     {
-      id: 'websites',
-      title: 'Websites',
-      tagline: 'Simple, mobile-friendly websites built to bring in customers.',
+      id: 'galleries',
+      title: 'Photo-led project galleries',
+      tagline: 'Let your finished work sell for you.',
       accentColor: '#0F6E56',
       accentBg: '#E7F6F1',
       icon: <Globe className="w-6 h-6" style={{ color: '#0F6E56' }} />,
-      idealFor: 'Tradespeople, salons, cafes, clinics, and local professional services needing an effective online presence.',
+      idealFor: 'Showcase your portfolio immediately.',
       features: [
-        'Designed specifically for mobile phones and tablets',
-        'Fast loading speeds with zero clutter or unnecessary extras',
-        'Clear call-to-action buttons for phone calls, WhatsApp, and quote requests',
-        'Easy to update and maintain without technical headaches',
-        'Search-friendly structure so local customers can find you easily'
+        'Full-width project galleries',
+        'Before/after comparison sliders',
+        'Mobile-optimized photos',
+        'Fast-loading images',
+        'Organized by project type'
       ]
     },
     {
-      id: 'social-media',
-      title: 'Social media marketing',
-      tagline: 'Grow your local presence and stay visible to nearby customers.',
+      id: 'contact',
+      title: 'Quote request forms',
+      tagline: 'Make it easy for homeowners to reach you.',
       accentColor: '#D85A30',
       accentBg: '#FDEFEA',
       icon: <Share2 className="w-6 h-6" style={{ color: '#D85A30' }} />,
-      idealFor: 'Businesses wanting to stay active, build trust, and reach local clients in their immediate service area.',
+      idealFor: 'Never lose a lead again.',
       features: [
-        'Targeted local visibility campaigns on Facebook and Instagram',
-        'Clear, straightforward messaging tailored to your community',
-        'Consistent digital presence that keeps your business top of mind',
-        'Lead generation campaigns that connect you directly with interested buyers',
-        'No confusing marketing jargon, just transparent progress'
+        'Tap-to-call buttons everywhere',
+        'Simple quote forms',
+        'Direct email routing',
+        'Mobile-friendly contact',
+        'Quick name and project capture'
       ]
     },
     {
-      id: 'ai-automation',
-      title: 'AI and automation',
-      tagline: 'Save time on repetitive admin and customer follow-up.',
+      id: 'performance',
+      title: 'Fast, lean pages',
+      tagline: 'Sites that load quickly on every device.',
       accentColor: '#534AB7',
       accentBg: '#EFEFFC',
       icon: <Sparkles className="w-6 h-6" style={{ color: '#534AB7' }} />,
-      idealFor: 'Busy owners who spend too many evening hours answering repetitive questions and sending quotes.',
+      idealFor: 'Performance on weak signals.',
       features: [
-        'Automated initial responses to new website and message inquiries',
-        'Smart appointment and consultation booking reminders',
-        'Automated customer follow-ups so warm leads never get lost',
-        'Simple intake forms that organize your customer requests automatically',
-        'Practical, easy-to-use setups without complex software overhead'
+        'No bloated templates',
+        'Compressed images',
+        'Minimal, focused design',
+        'Mobile-first performance',
+        'Reliable hosting'
       ]
     }
   ]
@@ -66,52 +66,52 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>Our Services - Website Design, Social Media & AI Automation | xcelsolve</title>
-        <meta name="description" content="Professional website design, social media marketing, and AI automation services for UK small businesses. Simple solutions that bring results." />
+        <title>What You Get - Premium Website Features for Kitchen & Bath Pros | xcelsolve</title>
+        <meta name="description" content="Photo-led galleries, before/after sliders, quote forms, and fast-loading pages. Everything kitchen and bath remodelers need in a website." />
         <link rel="canonical" href="https://xcelsolve.com/services" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://xcelsolve.com/services" />
-        <meta property="og:title" content="Our Services - Website Design, Social Media & AI Automation | xcelsolve" />
-        <meta property="og:description" content="Professional website design, social media marketing, and AI automation services for UK small businesses. Simple solutions that bring results." />
+        <meta property="og:title" content="What You Get - Premium Website Features for Kitchen & Bath Pros | xcelsolve" />
+        <meta property="og:description" content="Photo-led galleries, before/after sliders, quote forms, and fast-loading pages. Everything kitchen and bath remodelers need in a website." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Web Design and Digital Marketing",
+            "serviceType": "Web Design for Kitchen and Bath Remodelers",
             "provider": {
               "@type": "Organization",
               "name": "xcelsolve"
             },
             "areaServed": {
               "@type": "Country",
-              "name": "United Kingdom"
+              "name": "United States"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Digital Services",
+              "name": "Website Features",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Website Design",
-                    "description": "Simple, mobile-friendly websites built to bring in customers"
+                    "name": "Photo-led Project Galleries",
+                    "description": "Let your finished work sell for you"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Social Media Marketing",
-                    "description": "Grow your local presence and stay visible to nearby customers"
+                    "name": "Quote Request Forms",
+                    "description": "Make it effortless for homeowners to reach you"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "AI and Automation",
-                    "description": "Save time on repetitive admin and customer follow-up"
+                    "name": "Fast, Lean Pages",
+                    "description": "Sites that load quickly on every device"
                   }
                 }
               ]
@@ -138,10 +138,10 @@ function Services() {
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-            Simple services built for real results
+            What you get
           </h1>
           <p className="text-base sm:text-lg text-slate-600 leading-loose">
-            Everything your business needs to attract customers,<br className="hidden sm:block" /> build credibility, and save valuable time.
+            Everything a kitchen & bath remodeler needs<br className="hidden sm:block" /> to turn visitors into quote requests.
           </p>
         </div>
 
@@ -220,7 +220,7 @@ function Services() {
 
                   <div className="pt-6 mt-6 border-t border-slate-200/60">
                     <p className="text-xs text-slate-500">
-                      Transparent pricing with zero hidden fees.
+                      Part of every xcelsolve website.
                     </p>
                   </div>
                 </div>
@@ -232,16 +232,16 @@ function Services() {
         {/* Bottom CTA Block */}
         <div className="mt-16 sm:mt-24 text-center bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4 tracking-tight">
-            Not sure which service is right for you?
+            Ready to see your homepage?
           </h2>
           <p className="text-slate-600 max-w-xl mx-auto mb-8 text-base leading-loose">
-            Tell us about your business and we will suggest the most practical, cost-effective setup for your goals.
+            We'll design a free preview for your business. No obligation, no pressure.
           </p>
           <Link
             to="/contact"
             className="inline-block px-10 py-4 bg-[#0C447C] hover:bg-[#08335D] text-white rounded-full font-bold text-base transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
           >
-            Get a free quote
+            Get your free homepage preview
           </Link>
         </div>
       </div>
