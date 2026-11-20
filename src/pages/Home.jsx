@@ -164,6 +164,71 @@ function Home() {
 
         <div className="text-center mt-12">
           <p className="text-slate-600 mb-6">Mr. Bath - Complete bathroom redesign with modern gallery</p>
+        </div>
+      </section>
+
+      {/* Previous Work Section */}
+      <section className="relative max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] mb-4">
+            Live sites we've built
+          </h2>
+          <p className="text-lg text-slate-600">
+            Click to explore
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Insta Plus */}
+          <a
+            href="https://instaplus.ismaeelardo.workers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white rounded-3xl border-2 border-slate-200 overflow-hidden hover:border-[#0C447C] transition-all hover:shadow-xl"
+          >
+            <div className="aspect-video overflow-hidden bg-slate-100">
+              <img
+                src="/images/work/instaplus.png"
+                alt="Install Plus website"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#0C447C] transition-colors">
+                Install Plus
+              </h3>
+              <p className="text-slate-600 text-sm mt-1">
+                Kitchen installer portfolio site
+              </p>
+            </div>
+          </a>
+
+          {/* NJS Installations */}
+          <a
+            href="https://njsinstallation.ismaeelardo.workers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white rounded-3xl border-2 border-slate-200 overflow-hidden hover:border-[#0C447C] transition-all hover:shadow-xl"
+          >
+            <div className="aspect-video overflow-hidden bg-slate-100">
+              <img
+                src="/images/work/njsinstallation.png"
+                alt="NJS Installations website"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#0C447C] transition-colors">
+                NJS Installations
+              </h3>
+              <p className="text-slate-600 text-sm mt-1">
+                Kitchen, bathroom & building works
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div className="text-center mt-12">
           <Link
             to="/services"
             className="inline-block px-8 py-4 bg-[#0C447C] hover:bg-[#08335D] text-white rounded-full font-bold text-base transition-all shadow-md hover:shadow-lg active:scale-[0.98]"

@@ -132,6 +132,70 @@ function HomeMobile() {
         </div>
       </section>
 
+      {/* Previous Work Section */}
+      <section className="relative px-5 py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-black text-slate-900 tracking-tight leading-[1.1] mb-3">
+            Live sites we've built
+          </h2>
+          <p className="text-base text-slate-600">
+            Tap to explore
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {/* Insta Plus */}
+          <a
+            href="https://instaplus.ismaeelardo.workers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white rounded-2xl border-2 border-slate-200 overflow-hidden active:border-[#0C447C] transition-all active:shadow-lg"
+            style={{ touchAction: 'manipulation' }}
+          >
+            <div className="aspect-video overflow-hidden bg-slate-100">
+              <img
+                src="/images/work/instaplus.png"
+                alt="Install Plus website"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="p-5">
+              <h3 className="text-lg font-bold text-slate-900">
+                Install Plus
+              </h3>
+              <p className="text-slate-600 text-sm mt-1">
+                Kitchen installer portfolio site
+              </p>
+            </div>
+          </a>
+
+          {/* NJS Installations */}
+          <a
+            href="https://njsinstallation.ismaeelardo.workers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white rounded-2xl border-2 border-slate-200 overflow-hidden active:border-[#0C447C] transition-all active:shadow-lg"
+            style={{ touchAction: 'manipulation' }}
+          >
+            <div className="aspect-video overflow-hidden bg-slate-100">
+              <img
+                src="/images/work/njsinstallation.png"
+                alt="NJS Installations website"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="p-5">
+              <h3 className="text-lg font-bold text-slate-900">
+                NJS Installations
+              </h3>
+              <p className="text-slate-600 text-sm mt-1">
+                Kitchen, bathroom & building works
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* Why Section */}
       <section className="relative px-5 py-12">
         <div className="text-center mb-8">
